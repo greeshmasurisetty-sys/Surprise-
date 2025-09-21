@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Surprise 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 38px;
+      color: #ff1493;
+      text-shadow: 2px 2px 6px #fff;
+      margin-bottom: 25px;
+      animation: pop 2s infinite;
+    }
+
+    @keyframes pop {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+    /* Envelope */
+    .envelope {
+      width: 240px;
+      height: 160px;
+      background: #ff4e50;
+      position: relative;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      transition: transform 0.4s;
+    }
+    .envelope:hover { transform: scale(1.08); }
+    .flap {
+      position: absolute;
+      top: 0; left: 0;
+      width: 0; height: 0;
+      border-left: 120px solid transparent;
+      border-right: 120px solid transparent;
+      border-bottom: 80px solid #ff7373;
+    }
+    .seal {
+      position: absolute;
+      bottom: 15px; left: 50%;
+      transform: translateX(-50%);
+      width: 45px; height: 45px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+      display: flex; justify-content: center; align-items: center;
+      font-size: 20px; color: #ff4e50;
+    }
+
+    /* Card */
+    .message-card {
+      display: none;
+      max-width: 750px;
+      background: #fffdf9;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+      overflow-y: auto;
+      max-height: 80vh;
+    }
+    .message-card h2 {
+      color: #ff4e50; font-size: 28px;
+    }
+    .message-card p {
+      color: #333; line-height: 1.8; font-size: 20px; margin-top: 15px;
+      white-space: pre-line;
+    }
+
+    footer {
+      margin-top: 20px; font-size: 16px; color: #555;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.8);}
+      to {opacity: 1; transform: scale(1);}
+    }
+
+    .birthday-pic {
+      width: 300px; border-radius: 35px; margin: 20px 0;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.5);
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #ff4e50, #f9d423);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+    button:hover { transform: scale(1.1); }
+
+    #videoBox { display: none; margin-top: 20px; }
+    iframe {
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 Happy Birthday Gulshan Esther 🌸✨</h1>
+
+  <!-- Envelope -->
+  <div class="envelope" onclick="openEnvelope()">
+    <div class="flap"></div>
+    <div class="seal">💌</div>
+  </div>
+
+  <!-- Hidden Card -->
+  <div class="message-card" id="card">
+    <h2>💌 A Special Message for You 💕</h2>
+
+    <p>
+Happy bday to the most favourite person of my life 😍❤️🌍. I don't know where to start, but I have alot to say to you 💯😘. I hope 19th treats you better than 18th 💕🥰. And may this 19th give you more happiness, love, and success in your life 🥳❤️.  
+
+Today is your birthday and is the best day for you to relax and enjoy the best things in life 🎈✨. This day I wanna say "Thank you for being in my life" 😊🎉, thanks for being the person whom I can always rely on. You're sweetest, cutest, the best I could ever afford in my life 🎶💕. Thanks for your love and support 💝🙏.  
+
+And biggest thanks for handling a stupid friend (#me 😌🥵). I can't forget our memories, the laugh, the fun, fights 🥰 I'll never forget them 😍💥😎. And yes we fight more 😂😝💯, but pagal that's what bestie's do 😅😁. I always waited for this day because I wanted to make you feel special 💯💯🌍, and try to make you more happiest 😏💥. You're the best I have in my life ✨🧸, you look so cute and beautiful ❤️😘.  
+
+"When you're jealous for me" 👻 and when you see my pic with my friend's 😋😜 but you know naa you're too special ✨💗. I'm possessive for you because you're my special person & I don’t want to share you with anyone 💥💯 but it's ohk.. you happy so I am happy 💯❤️😂.  
+
+This bday I wanna wish you "A very very happiest birthday jaaan 🌍🔥" from the bottom of my heart 🎀👑. I wish you a most beautiful happy birthday to you 💯🌍👑❤️.  
+
+#jaan ❤️👑 #meri maa 🙋‍♀️😉 #bestie 💥🥰 #angry bird 🥶 #behna 👀😜 #patner 😎 #queen 🥳👑 #everthing 🌍❤️  
+
+Once again Happy Birthday sweetheart 🥳🎂
+    </p>
+
+    <!-- Image -->
+    <img src="https://i.ibb.co/LdXvRcDt/IMG-20250802-WA0033.jpg" class="birthday-pic" alt="Gulshan Esther">
+
+    <!-- Button for Song -->
+    <button onclick="showVideo()">🎶 Click for Birthday Song 🎶</button>
+
+    <!-- YouTube Video -->
+    <div id="videoBox">
+      <iframe width="500" height="280"
+        src="https://www.youtube.com/embed/WgTMeICssXY?autoplay=1"
+        title="Birthday Song" frameborder="0"
+        allow="autoplay; encrypted-media" allowfullscreen>
+      </iframe>
+    </div>
+
+    <footer>Made with ❤️ by your bestie 🫂</footer>
+  </div>
+
+  <script>
+    function openEnvelope() {
+      document.querySelector('.envelope').style.display = 'none';
+      document.getElementById('card').style.display = 'block';
+    }
+    function showVideo() {
+      document.getElementById("videoBox").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
